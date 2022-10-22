@@ -44,5 +44,3 @@ Route::get('authors/{author:username}', function (User $author) {
 });
   
 
-  
-  
