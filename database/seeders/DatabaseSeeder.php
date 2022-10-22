@@ -44,8 +44,8 @@ class DatabaseSeeder extends Seeder
             'category_id' => $family->id,
 
 
-            'title' => 'My First Post',
-            'slug' => 'my-first-post',
+            'title' => 'My Family Post',
+            'slug' => 'my-family-post',
             'excerpt' => '<p> Lorem ipsum dolar sit amet </p>',
             'body' => '<p> random text </p>'
         ]);
