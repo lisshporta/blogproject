@@ -21,7 +21,7 @@
                 </div>    
 
                 <div class="flex justify-end mt-5 pt-3">
-                    <x-submit-button>Post Comment</x-submit-button>
+                    <x-form.button>Post Comment</x-form.button>
                 </div>
             </form>
             </x-panel>
