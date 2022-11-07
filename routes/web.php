@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Validation\ValidationException;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AdminPostController;
 
 
 
@@ -28,8 +29,12 @@ Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
 
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
-Route::get('admin/posts/create', [PostController::class, 'create'])->middleware('admin');
-Route::post('admin/posts', [PostController::class, 'store'])->middleware('admin');
+Route::post('admin/posts', [AdminPostController::class, 'store'])->middleware('admin');
+Route::get('admin/posts/create', [AdminPostController::class, 'create'])->middleware('admin');
+Route::get('admin/posts/', [AdminPostController::class, 'index'])->middleware('admin');
+Route::get('admin/posts/{post}/edit', [AdminPostController::class, 'edit'])->middleware('admin');
+Route::patch('admin/posts/{post}', [AdminPostController::class, 'update'])->middleware('admin');
+Route::delete('admin/posts/{post}', [AdminPostController::class, 'destroy'])->middleware('admin');
 
 Route::get('admin/create-category', [CategoryController::class, 'create'])->middleware('admin');
-Route::post('admin/category', [CommentController::class, 'store'])->middleware('admin');
+Route::post('admin/category', [CategoryController::class, 'store'])->middleware('admin');

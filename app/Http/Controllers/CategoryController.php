@@ -24,6 +24,6 @@ class CategoryController extends Controller
 
         Category::create($attributes);
 
-        return redirect('/')->with('success', 'Your post has been created.');
+        return redirect('/admin/posts')->with('success', 'Category Created!');
     }
 }

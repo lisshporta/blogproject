@@ -29,7 +29,7 @@
                         <button class="text-xs font-bold uppercase">Welcome, {{ auth()->user()->name }}!</button>
                         </x-slot>
 
-                        <x-dropdown-item href="/">Homepage</x-dropdown-item>
+                        <x-dropdown-item href="/admin/posts">Dashboard </x-dropdown-item>
                         <x-dropdown-item href="/admin/posts/create">New Post</x-dropdown-item>
                         <x-dropdown-item href="/admin/create-category">New Category</x-dropdown-item>
                         <x-dropdown-item href="#" x-data="{}" @click.prevent="document.querySelector('#logout-form').submit()">Log Out</x-dropdown-item>
