@@ -30,14 +30,14 @@ Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
 Route::middleware('admin')->group(function () {
-Route::post('admin/posts', [AdminPostController::class, 'store']);
-Route::get('admin/posts/create', [AdminPostController::class, 'create']);
-Route::get('admin/posts/', [AdminPostController::class, 'index']);
-Route::get('admin/posts/{post}/edit', [AdminPostController::class, 'edit']);
-Route::patch('admin/posts/{post}', [AdminPostController::class, 'update']);
-Route::delete('admin/posts/{post}', [AdminPostController::class, 'destroy']);
+Route::post('dashboard/posts', [AdminPostController::class, 'store']);
+Route::get('dashboard/posts/create', [AdminPostController::class, 'create']);
+Route::get('dashboard/posts/', [AdminPostController::class, 'index']);
+Route::get('dashboard/posts/{post}/edit', [AdminPostController::class, 'edit']);
+Route::patch('dashboard/posts/{post}', [AdminPostController::class, 'update']);
+Route::delete('dashboard/posts/{post}', [AdminPostController::class, 'destroy']);
 
-Route::get('admin/create-category', [CategoryController::class, 'create']);
-Route::post('admin/category', [CategoryController::class, 'store']);
+Route::get('dashboard/create-category', [CategoryController::class, 'create']);
+Route::post('dashboard/category', [CategoryController::class, 'store']);
 
 });

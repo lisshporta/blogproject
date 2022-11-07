@@ -29,7 +29,7 @@
                         <button class="text-xs font-bold uppercase">Welcome, {{ auth()->user()->name }}!</button>
                         </x-slot>
                     @if (auth()->user()->can('admin'))
-                        <x-dropdown-item href="/admin/posts">Dashboard </x-dropdown-item>
+                        <x-dropdown-item href="/dashboard/posts">Dashboard </x-dropdown-item>
                     @endif
 
                         <x-dropdown-item href="#" x-data="{}" @click.prevent="document.querySelector('#logout-form').submit()">Log Out</x-dropdown-item>

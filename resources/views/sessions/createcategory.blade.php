@@ -1,7 +1,7 @@
 <x-layout>
     <x-setting heading="Create New Category">
 
-        <form method="POST" action="/admin/posts" enctype="multipart/form-data">
+        <form method="POST" action="/dashboard/category" enctype="multipart/form-data">
             @csrf
            
            <x-form.input name="name"/>

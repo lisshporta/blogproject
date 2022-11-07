@@ -9,14 +9,18 @@
             <h4 class="font-semibold mb-4">Links</h4>
             <ul>
                 <li>
-                    <a href="/admin/posts" class="{{ request()->is('admin/posts') ? 'text-blue-500' : '' }}">All Posts</a>
+                    <a href="/dashboard/posts" class="{{ request()->is('dashboard/posts') ? 'text-blue-500' : '' }}">All Posts</a>
+                </li>
+                {{-- <li>
+                    <a href="/dashboard/users" class="{{ request()->is('dashboard/users') ? 'text-blue-500' : '' }}">Users</a>
+                </li> --}}
+                <li>
+                    <a href="/dashboard/posts/create" class="{{ request()->is('dashboard/posts/create') ? 'text-blue-500' : "" }}">New Post</a>
                 </li>
                 <li>
-                    <a href="/admin/posts/create" class="{{ request()->is('admin/posts/create') ? 'text-blue-500' : "" }}">New Post</a>
+                    <a href="/dashboard/create-category" class="{{ request()->is('dashboard/create-category') ? 'text-blue-500' : "" }}">New Category</a> 
                 </li>
-                <li>
-                    <a href="/admin/create-category" class="{{ request()->is('admin/create-category') ? 'text-blue-500' : "" }}">New Category</a> 
-                </li>
+                
             </ul>
         </aside>
 

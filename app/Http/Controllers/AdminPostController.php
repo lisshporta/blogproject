@@ -63,7 +63,7 @@ class AdminPostController extends Controller
 
         $post->update($attributes);
 
-        return redirect('/admin/posts')->with('success', 'Post Updated!');
+        return redirect('/dashboard/posts')->with('success', 'Post Updated!');
     }
 
 

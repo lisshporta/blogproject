@@ -16,14 +16,16 @@ class CategoryController extends Controller
     public function store()
     {
 
+
         $attributes = request()->validate([
-            'name' => 'required',
-            'slug' => 'required'
+            'name' => 'required|unique:categories,name',
+            'slug' => 'required|unique:categories,slug'
 
         ]);
 
         Category::create($attributes);
 
-        return redirect('/admin/posts')->with('success', 'Category Created!');
-    }
+
+        return redirect('/dashboard/posts')->with('success', 'Category Created!');
+     }
 }
