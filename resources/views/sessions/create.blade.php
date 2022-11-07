@@ -13,7 +13,7 @@
                         Email
                     </label>
 
-                    <input class="border border-gray-400 p-2 w-full"
+                    <input class="border border-gray-400 p-2 w-full rounded"
                            type="email"
                            name="email"
                            id="email"
@@ -33,7 +33,7 @@
                         Password
                     </label>
 
-                    <input class="border border-gray-400 p-2 w-full"
+                    <input class="border border-gray-400 p-2 w-full rounded"
                            type="password"
                            name="password"
                            id="password"

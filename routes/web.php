@@ -8,6 +8,9 @@ use App\Services\Newsletter;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Validation\ValidationException;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\CategoryController;
+
+
 
 
 Route::get('/', [PostController::class, 'index'])->name('home');
@@ -27,3 +30,6 @@ Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth'
 
 Route::get('admin/posts/create', [PostController::class, 'create'])->middleware('admin');
 Route::post('admin/posts', [PostController::class, 'store'])->middleware('admin');
+
+Route::get('admin/create-category', [CategoryController::class, 'create'])->middleware('admin');
+Route::post('admin/category', [CommentController::class, 'store'])->middleware('admin');
