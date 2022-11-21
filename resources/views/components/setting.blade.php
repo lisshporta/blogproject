@@ -11,9 +11,7 @@
                 <li>
                     <a href="/dashboard/posts" class="{{ request()->is('dashboard/posts') ? 'text-blue-500' : '' }}">All Posts</a>
                 </li>
-                {{-- <li>
-                    <a href="/dashboard/users" class="{{ request()->is('dashboard/users') ? 'text-blue-500' : '' }}">Users</a>
-                </li> --}}
+        
                 <li>
                     <a href="/dashboard/posts/create" class="{{ request()->is('dashboard/posts/create') ? 'text-blue-500' : "" }}">New Post</a>
                 </li>
