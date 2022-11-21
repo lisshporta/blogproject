@@ -41,5 +41,4 @@
         </div>
 
     </x-setting>
-   
 </x-layout>

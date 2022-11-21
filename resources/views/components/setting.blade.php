@@ -6,7 +6,7 @@
     
     <div class="flex">
         <aside class="w-48">
-            <h4 class="font-semibold mb-4">Links</h4>
+            <h4 class="font-semibold mb-4">Dashboard</h4>
             <ul>
                 <li>
                     <a href="/dashboard/posts" class="{{ request()->is('dashboard/posts') ? 'text-blue-500' : '' }}">All Posts</a>
